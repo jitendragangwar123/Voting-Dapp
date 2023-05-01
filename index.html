@@ -6,7 +6,7 @@
     <script src="main.js"></script>
     <style>
         button {
-            background-color: aqua;
+            background-color:#2aa5a5;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -41,7 +41,7 @@
             padding: 12px 20px;
             margin:8px 0;
             box-sizing: border-box;
-            border: 2px solid blueviolet;
+            border: 2px solid #2aa5a5;
             border-radius: 4px;
         }
 
@@ -50,7 +50,7 @@
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
-            border: 2px solid blueviolet;
+            border: 2px solid #2aa5a5;
             border-radius: 4px;
         }
 
@@ -64,7 +64,7 @@
         }
 
         input[type=submit]:hover {
-            background-color: blue;
+            background-color: rgb(8, 115, 202);
         }
 
         .container{
@@ -72,6 +72,7 @@
             color: brown;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
+            font-size: 25px;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -85,8 +86,9 @@
 
         .navbar {
             overflow: hidden;
-            background-color: brown;
+            background-color: #2aa5a5;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
         }
 
         .navbar a{
@@ -99,7 +101,7 @@
         }
 
         .navbar a:hover{
-            background-color: blueviolet;
+            background-color: #1375d1;
             color: black;
         }
 
@@ -118,7 +120,7 @@
         }
 
         #myTable th{
-            background-color: antiquewhite;
+            background-color: #faf9d7;
             font-weight: bold;
         }
     </style>
@@ -138,7 +140,7 @@
 
     <div class="container">
         <span>Vote Here</span>
-        <input type="number" id="vote" placeholder="Add Index of the Voter">
+        <input type="number" id="vote" placeholder="Please Add Index of the Voter......">
         <button onclick="addVote()">Add Vote</button>
         <p id="cand"></p>
 

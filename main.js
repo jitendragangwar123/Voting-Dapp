@@ -190,7 +190,7 @@ const addVote = async() => {
     }
     else {
         var cand = document.getElementById("cand");
-        cand.innerHTML = "Please connect metamask first";
+        cand.innerHTML = "Please connect metamask first!";
     }
 }
 
@@ -210,7 +210,7 @@ const voteStatus = async() => {
     }
     else {
         var status = document.getElementById("status");
-        status.innerHTML = "Please connect metamask first";
+        status.innerHTML = "Please connect metamask first!";
     }
 }
 const getAllCandidates=async()=>{
@@ -220,7 +220,7 @@ const getAllCandidates=async()=>{
         await provider.send("eth_requestAccounts", []);
         const signer = provider.getSigner();
         const contractInstance = new ethers.Contract(contractAddress, contractAbi, signer);
-        p3.innerHTML = "Please wait, getting all the candidates from the voting smart contract";
+        p3.innerHTML = "Please wait, getting all the candidates from the voting smart contract!";
         var candidates = await contractInstance.getAllVotesOfCandidates();
         console.log(candidates);
         var table = document.getElementById("myTable");
@@ -236,10 +236,10 @@ const getAllCandidates=async()=>{
             statusCell.innerHTML = candidates[i].voteCount;
         }
 
-        p3.innerHTML = "The tasks are updated"
+        p3.innerHTML = "The table is updated!"
     }
     else {
         var p3 = document.getElementById("p3");
-        p3.innerHTML = "Please connect metamask first";
+        p3.innerHTML = "Please connect metamask first!";
     }
 }

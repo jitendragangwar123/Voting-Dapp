@@ -56,7 +56,6 @@ contract Voting{
 
     function getVotingStatus() public view returns(bool){
         return (block.timestamp>=votingStart && block.timestamp<votingEnd);
-
     }
 
     function getRemainingTime() public view returns(uint){

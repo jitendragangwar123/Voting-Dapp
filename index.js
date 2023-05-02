@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const express=require("express");
 const app=express();
 const fileUpload=require("express-fileupload");
@@ -32,24 +33,24 @@ app.get("/index.html",(req,res)=>{
     res.sendFile(path.join(__dirname,"index.html"));
 })
 
-app.post("/addCandidate",async(req,res)=>{
-    var vote=req.body.vote;
-    console.log(vote);
-    async function storeDataInBlockchain(vote){
-        console.log("Adding the candidate in voting contract");
-        const tx=await contractInstance.addCandidate(vote);
+app.post("/vote",async(req,res)=>{
+    var _name=req.body._name;
+    console.log(_name);
+    async function storeDataInBlockchain(_name){
+        console.log("Adding the candidate in voting contract....");
+        const tx=await contractInstance.addCandidate(_name);
         await tx.wait();
     }
     const bool=await contractInstance.getVotingStatus();
     if(bool==true){
-        await storeDataInBlockchain(vote);
+        await storeDataInBlockchain(_name);
         res.send("The candidate has been registered in the contract!");
     }
     else{
         res.send("Voting is finshied!");
     }
-})
+});
 
 app.listen(port,function(){
-    console.log("App is listening on port 30000!!");
+    console.log("App is listening on port : 30000");
 })

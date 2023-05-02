@@ -11,3 +11,11 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+```
+sudo apt  install docker.io
+sudo docker ps -a
+sudo docker image ls
+sudo docker build -t jitendra/voting-app .
+sudo docker run -p 3000:3000 jitendra/voting-app
+```

@@ -1,4 +1,3 @@
-
 let WALLET_CONNECTED="";
 let contractAddress="0xD1733Ee3794734cce002d3Bd0A087f9F321fd005";
 let contractAbi=[
@@ -165,7 +164,8 @@ let contractAbi=[
             "type": "function"
           }
         ];
-        
+ 
+//connect metamask        
 const connectMetamask=async()=>{
     const provider=new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts",[]);
@@ -175,6 +175,7 @@ const connectMetamask=async()=>{
     element.innerHTML="Metamask is Connected : " + WALLET_CONNECTED;
 }
 
+//cast the vote
 const addVote = async() => {
     if(WALLET_CONNECTED != 0) {
         var name = document.getElementById("vote");
@@ -194,6 +195,7 @@ const addVote = async() => {
     }
 }
 
+//return the vote status
 const voteStatus = async() => {
     if(WALLET_CONNECTED != 0) {
         var status = document.getElementById("status");
@@ -213,6 +215,7 @@ const voteStatus = async() => {
         status.innerHTML = "Please connect metamask first!";
     }
 }
+// return the list of candidates
 const getAllCandidates=async()=>{
     if(WALLET_CONNECTED != 0) {
         var p3 = document.getElementById("p3");

@@ -13,9 +13,14 @@ npx hardhat run scripts/deploy.js
 ```
 
 ```
+//install the docker
 sudo apt  install docker.io
+//show all container
 sudo docker ps -a
+//show all images
 sudo docker image ls
+//to build the image
 sudo docker build -t jitendra/voting-app .
+//to run the image
 sudo docker run -p 3000:3000 jitendra/voting-app
 ```

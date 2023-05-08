@@ -215,6 +215,7 @@ const voteStatus = async() => {
         status.innerHTML = "Please connect metamask first!";
     }
 }
+
 // return the list of candidates
 const getAllCandidates=async()=>{
     if(WALLET_CONNECTED != 0) {
@@ -244,5 +245,5 @@ const getAllCandidates=async()=>{
     else {
         var p3 = document.getElementById("p3");
         p3.innerHTML = "Please connect metamask first!";
-    }
+  }
 }

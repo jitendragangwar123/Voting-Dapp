@@ -20,7 +20,7 @@ sudo docker ps -a
 //show all images
 sudo docker image ls
 //to build the image
-sudo docker build -t jitendra/voting-app .
+sudo docker build -t jitendra/voting-dapp .
 //to run the image
-sudo docker run -p 3000:3000 jitendra/voting-app
+sudo docker run -p 3000:3000 jitendra/voting-dapp
 ```

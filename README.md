@@ -1,9 +1,8 @@
-# Sample Hardhat Project
+## Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+- This repository contains a decentralized voting application, often referred to as a Voting Dapp, built on the Ethereum blockchain. This application leverages blockchain technology to create a secure, transparent, and tamper-proof voting system. Users can cast their votes, and the results are recorded on the Ethereum blockchain, ensuring the integrity of the voting process. This type of application has the potential to enhance trust in elections and voting procedures by providing a verifiable and immutable record of the votes.
 
-Try running some of the following tasks:
-
+## Project Setup
 ```shell
 npx hardhat help
 npx hardhat test
